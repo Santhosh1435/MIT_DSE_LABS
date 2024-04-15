@@ -12,9 +12,11 @@ cat input.txt | python3 mapper.py | sort | python3 reducer.py
 streaming:
 
 1.hdfs dfs -put /workdir/emp.txt /
+
 mapred streaming -input /emp.txt -output /out -file /workdir/map.py -mapper /workdir/map.py -reducer /workdir/red.py -file /workdir/red.py
 
 2.hdfs dfs -put emp.txt /
+
 mapred streaming -input /input.txt -output /out -file map.py -mapper map.py -reducer red.py -file red.py
 
 To view out files -->> hdfs dfs -ls /out
