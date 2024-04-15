@@ -13,7 +13,7 @@ streaming:
 
 1.hdfs dfs -put /workdir/emp.txt /
 
-mapred streaming -input /emp.txt -output /out -file /workdir/map.py -mapper /workdir/map.py -reducer /workdir/red.py -file /workdir/red.py
+mapred streaming -input /in.txt -output /out -file /workdir/hadoop/map.py -mapper /workdir/hadoop/map.py -reducer /workdir/hadoop/red.py -file /workdir/hadoop/red.py
 
 2.hdfs dfs -put emp.txt /
 
